@@ -63,3 +63,52 @@
     @keyframes fadeIn {
       from { opacity: 0; transform: translateY(20px); }
       to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.08); }
+      100% { transform: scale(1); }
+    }
+
+    @keyframes float {
+      0% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+      100% { transform: translateY(0); }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="screen active" id="screen1">
+    <div class="emoji">🌸</div>
+    <p>
+      एक छोटा-सा पल,<br>
+      सिर्फ तुम्हारे लिए।
+    </p>
+    <button class="tap" onclick="next()">यहाँ टैप करो</button>
+  </div>
+
+  <div class="screen" id="screen2">
+    <h1>जन्मदिन की शुभकामनाएँ ❤️</h1>
+    <p>
+      तुम्हारी मुस्कान ही<br>
+      इस दिन की सबसे बड़ी खुशी है।
+      <br><br>
+      ऐसे ही चमकती रहो,<br>
+      जैसे तुम हमेशा चमकती हो।
+    </p>
+    <div class="emoji">✨</div>
+    <p>— तुम्हारा</p>
+  </div>
+
+  <script>
+    function next() {
+      document.getElementById("screen1").classList.remove("active");
+      document.getElementById("screen2").classList.add("active");
+    }
+  </script>
+
+</body>
+</html>
